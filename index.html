@@ -12,11 +12,13 @@
     }
 
     h1 {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
 
-    .days {
+    #day {
+      font-size: 22px;
       margin-bottom: 20px;
+      font-weight: bold;
     }
 
     button {
@@ -36,15 +38,26 @@
 
   <h1>Mitä tänään syötäisiin?</h1>
 
-  <div class="days">
-    Maanantai | Tiistai | Keskiviikko | Torstai | Perjantai | Lauantai | Sunnuntai
-  </div>
+  <div id="day"></div>
 
   <button onclick="showFood()">Paina tästä</button>
 
   <div id="result"></div>
 
   <script>
+    const days = [
+      "Sunnuntai",
+      "Maanantai",
+      "Tiistai",
+      "Keskiviikko",
+      "Torstai",
+      "Perjantai",
+      "Lauantai"
+    ];
+
+    const today = new Date().getDay();
+    document.getElementById("day").innerText = days[today];
+
     function showFood() {
       document.getElementById("result").innerText = "Nakkimakaroonipata";
     }
