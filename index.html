@@ -60,9 +60,33 @@
     const today = new Date().getDay();
     document.getElementById("day").innerText = days[today];
 
-    function showFood() {
-      document.getElementById("result").innerText = "NAKKIMAKAROONIPATA!";
-    }
+ <script>
+  function showFood() {
+    document.getElementById("result").innerHTML = `
+      <h2>NAKKIMAKAROONIPATA</h2>
+
+      <h3>Ainekset:</h3>
+      <ul style="text-align:left; display:inline-block;">
+        <li>makaroneja</li>
+        <li>nakkeja</li>
+        <li>vettä</li>
+        <li>suolaa</li>
+        <li>öljyä tai voita paistamiseen</li>
+        <li>(halutessa: ketsuppia)</li>
+      </ul>
+
+      <h3>Valmistusohje:</h3>
+      <ol style="text-align:left; display:inline-block;">
+        <li>Keitä makaroonit pakkauksen ohjeen mukaan suolatussa vedessä.</li>
+        <li>Valuta kypsät makaroonit.</li>
+        <li>Viipaloi nakit.</li>
+        <li>Paista nakit pannulla kevyesti ruskistuen.</li>
+        <li>Lisää keitetyt makaroonit pannulle nakkien joukkoon.</li>
+        <li>Sekoita ja paista hetki, jotta maut yhdistyvät.</li>
+        <li>Tarjoile lämpimänä (halutessa ketsupin kanssa).</li>
+      </ol>
+    `;
+  }
   </script>
 
 </body>
